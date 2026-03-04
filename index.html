@@ -1,113 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DemonZ Lounge</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0f0f12;
-      color: #e6e6e6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      font-weight: 600;
-      margin-bottom: 10px;
-      letter-spacing: -1px;
-    }
-
-    .subtitle {
-      color: #888;
-      font-size: 16px;
-      margin-bottom: 50px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #cfcfcf;
-      margin-bottom: 20px;
-    }
-
-    .links {
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .links a {
-      text-decoration: none;
-      padding: 10px 18px;
-      border: 1px solid #2a2a2f;
-      border-radius: 6px;
-      color: #e6e6e6;
-      font-size: 14px;
-      transition: 0.2s ease;
-    }
-
-    .links a:hover {
-      background-color: #1a1a1f;
-      border-color: #444;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 13px;
-      color: #666;
-      margin-top: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>DemonZ Lounge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <h1>DemonZ Lounge</h1>
-    <div class="subtitle">A personal space on the internet since 2015.</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-inner">
+        <span class="logo">DemonZ Lounge</span>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#now">Now</a>
+          <a href="#links">Links</a>
+        </div>
+      </div>
+    </nav>
 
-    <h2>About</h2>
-    <p>
-      Hey, I’m Brody. I’m a gamer who enjoys tech, building things, and spending time outdoors when I’m not at a screen.
-      This site isn’t a portfolio or a business. It’s just my corner of the internet.
-    </p>
+    <!-- Particle Background -->
+    <canvas id="bgCanvas"></canvas>
 
-    <p>
-      I stream once in a while, post videos here and there, and sometimes drop a short when I feel like it.
-      Nothing overproduced. Just stuff I enjoy.
-    </p>
+    <div class="container">
 
-    <h2>Find Me</h2>
-    <div class="links">
-      <a href="https://youtube.com/@OfficialDemonicGaming" target="_blank">YouTube</a>
-      <a href="https://twitch.tv/the_demonicgamer" target="_blank">Twitch</a>
-      <a href="https://tiktok.com/@demonic_dragonz" target="_blank">TikTok</a>
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <!-- Hero -->
+        <section class="hero">
+            <h1>DemonZ Lounge</h1>
+            <p class="tagline" id="typed-text"></p>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>
+                Hey, I’m Brody. I’m a gamer who enjoys tech, building things when I feel like it,
+                and getting outside when I’ve spent too many hours staring at a screen.
+                This isn’t a brand or a business. It’s just my own spot on the internet.
+            </p>
+            <p>
+                I stream sometimes. I post videos here and there. Once in a while I’ll drop a short
+                if something funny happens. Nothing overproduced. Just stuff I enjoy.
+            </p>
+        </section>
+
+        <!-- Now -->
+        <section id="now" class="section">
+            <h2>Right Now</h2>
+            <p id="dynamic-now">
+                Currently saving for a new PC build and slowly improving this site.
+            </p>
+        </section>
+
+        <!-- Links -->
+        <section id="links" class="section">
+            <h2>Find Me</h2>
+            <div class="links-grid">
+                <a href="https://youtube.com/yourchannel" target="_blank" class="link-card">
+                    <h3>YouTube</h3>
+                    <span>Videos and uploads</span>
+                </a>
+
+                <a href="https://twitch.tv/yourchannel" target="_blank" class="link-card">
+                    <h3>Twitch</h3>
+                    <span>Streams when I go live</span>
+                </a>
+
+                <a href="https://tiktok.com/@yourhandle" target="_blank" class="link-card">
+                    <h3>TikTok</h3>
+                    <span>Short clips and moments</span>
+                </a>
+
+                <a href="https://github.com/yourusername" target="_blank" class="link-card">
+                    <h3>GitHub</h3>
+                    <span>Code and experiments</span>
+                </a>
+            </div>
+        </section>
+
     </div>
-  </div>
 
-  <footer>
-    © 2015–2026 DemonZLounge. All rights reserved.
-  </footer>
+    <!-- Footer -->
+    <footer>
+        © 2015–2026 DemonZLounge. All rights reserved.
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
